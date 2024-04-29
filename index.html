@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/moon.css">
+		<link rel="stylesheet" href="dist/theme/sky.css">
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="plugin/highlight/monokai.css">
@@ -19,43 +19,115 @@
 				<section>Authentication Mechanisms</section>
 				<section>
 					<h4>Authentication and authorization</h4>
-					<section>Authentication</section>
-					<section>Authorization</section>
+					<section>
+						<img class="fragment" src="./images/authorization.avif"  width="950px" height="468px">
 					</section>
+				</section>
+				<section>
+					<ul>
+						<li><a href="#/grand-finale">Username-Password scheme</a></li>
+						<li>OAuth (Open Authorization)</li>
+						<li>OpenID Connect</li>
+						<li>SAML (Security Assertion Markup Language)</li>
+						<li>Multi-factor Authentication (MFA)</li>
+						<li>Biometric Authentication</li>
+						<li>Client Certificate Authentication</li>
+					</ul>
+				</section>
 					<section>Sessions and tokens</section>
 					
 					<section>
-						<h4>Sessions</h4>
+						<h3>Sessions</h3>
+						<section>
+							<img class="fragment" src="./images/Sessions.png" width="950px" height="528px">
+						</section>
+					</section>
+						<section>
+							<img class="fragment" src="./images/Sessions.png" width="350px" height="228px">
+							<p class="fragment fade-up">The user submits login and password</p>
+							<p class="fragment fade-up">The server verifies</p>
+							<p class="fragment fade-up">The server creates a session</p>
+							<p class="fragment fade-up">The client sends the session identifier</p>
+							<p class="fragment fade-up">The server validates the session identifier</p>
 						
-						<section>1. The user sends their login and password..</section><section>2. TThe user sends their login and password.зователь с таким логином паролем.</section>
+						</section>
+						<section>
+							Set-Cookie: session-id:M1bGLklJGLkajsdlaflaLKF8L$kl234ljDKf;
+						</section>
 						
-						<section>1. The user sends their login and password..</section>
-						<section>1. The user sends their login and password..</section>
-						<section>1. The user sends their login and password..</section>
-						<section>1. The user sends their login and password..</section></section>
-
-
-
+						<section>
+							Authorization by session-id:M1bGLklJGLkajsdlaflaLKF8L$kl234ljDKf;
+						</section>
 					<section>
 						<h3>Tokens</h3>
-						<section>1. The user sends their login and password..</section><section>2. TThe user sends their login and password.зователь с таким логином паролем.</section>
-						
-						<section>1. The user sends their login and password..</section>
-						<section>1. The user sends their login and password..</section>
-						<section>1. The user sends their login and password..</section>
-						<section>1. The user sends their login and password..</section></section>
-	</section>
-
-					<section>
-						<h3>JWT</h3>
-						<section>header, payload, signature</section>
+						<section>
+							<img class="fragment" src="./images/token.jpg" width="750px" height="368px">
+						</section>
+					</section>
+						<section>
+							<img class="fragment" src="./images/token.jpg" width="450px" height="228px">
+							<p class="fragment fade-up">The user submits login and password</p>
+							<p class="fragment fade-up">The server verifies</p>
+							<p class="fragment fade-up">The server generates and signs a token</p>
+							<p class="fragment fade-up">The token sent to the client</p>
+							<p class="fragment fade-up">The server verifies the token information</p>
 						</section>
 
 						<section>
+							<code><pre>
+							{
+								"accessToken": "eyJhbGciOiJIUzI1Ni
+								.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZS
+								.8Jf3bJQz5_QMIz20io5LIVdRHzO",
+								"expiresIn": 900,
+								"tokenType": "Bearer"
+							}
+							</pre>
+							</code>
+						</section>
+						
+						<section>
+							Authorization by token:
+							<code><pre>
+								Authorization: Bearer eyJhbGciOiJIUzI1Ni
+								.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZS
+								.8Jf3bJQz5_QMIz20io5LIVdRHzO
+								</pre>
+								</code>
+							
+						</section>
+
+					<section>
+						<h3>JWT</h3>
+						<section><p  class="fragment"> header, payload, signature</p>
+							<img class="fragment" src="./images/JWT.png" width="650px" height="428px">
+						</section>
+						
+					</section>
+
+					<section>
+						<ul>
+							<li>Username-Password scheme</li>
+							<li><a href="#/grand">OAuth (Open Authorization)</a></li>
+							<li>OpenID Connect</li>
+							<li>SAML (Security Assertion Markup Language)</li>
+							<li>Multi-factor Authentication (MFA)</li>
+							<li>Biometric Authentication</li>
+							<li>Client Certificate Authentication</li>
+						</ul>
+					</section>
+
+						<section>
 							<h3>OAuth</h3>
-							<section>header, payload, signature</section>
+							<section>
+							<p class="fragment"></p>
+							<img class="fragment" src="./images/oauth.webp" width="550px" height="328px">
+								<p class="fragment fade-up">OAuth 1.0 (digital signatures): Authentication + Authorization</p>
+								<p class="fragment fade-up">OAuth 2.0 (tokens): only Authorization</p>
 							</section>
-	
+						</section>
+						
+
 					
 			</div>
 		</div>
